@@ -1,0 +1,31 @@
+{
+  "name": "puppeteer-starter-kit",
+  "version": "0.0.1",
+  "description": "Starter project for headless Chrome Node API using Puppeteer for UI Automation testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manhhailua/puppeteer-starter-kit.git"
+  },
+  "keywords": [
+    "puppeteer",
+    "test",
+    "end-to-end",
+    "headless",
+    "DevTools",
+    "Node",
+    "ui-automation"
+  ],
+  "author": "Manhhailua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manhhailua/puppeteer-starter-kit/issues"
+  },
+  "homepage": "https://github.com/manhhailua/puppeteer-starter-kit#readme",
+  "engines": {
+    "node": ">=7.6.0"
+  }
+}
