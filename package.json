@@ -6,7 +6,7 @@
     "lint": "eslint .",
     "pretest": "npm run verify",
     "test": "jest",
-    "verify": "babel-node ./tests/verify.js"
+    "verify": "babel-node ./configs/verify.js"
   },
   "repository": {
     "type": "git",
@@ -48,7 +48,7 @@
   "jest": {
     "setupFiles": [
       "babel-polyfill",
-      "<rootDir>/tests/setup.js"
+      "<rootDir>/configs/setup.js"
     ],
     "verbose": true
   }

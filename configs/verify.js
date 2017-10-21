@@ -4,4 +4,4 @@ import env from '../helpers/env';
 // .env config implementation
 dotEnv.config();
 
-env.checkEnvironmentVariables();
+env.verifyEnvironmentVariables();

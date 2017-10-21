@@ -1,15 +1,23 @@
-export const ERROR_ROOT_HREF_IS_NOT_DEFINED = new ReferenceError('ROOT_HREF is not defined. Example: https://google.com/');
+export const DEFAULT_UNDEFINED_VARIABLE_ERRORS = {
+  ROOT_HREF: 'ROOT_HREF is not defined. Example: "https://github.com/"',
+};
 
-export function checkEnvironmentVariables(
-  ROOT_HREF = process.env.ROOT_HREF,
-  error = ERROR_ROOT_HREF_IS_NOT_DEFINED,
+export function verifyEnvironmentVariables(
+  env = process.env,
+  errors = {},
 ) {
-  if (!ROOT_HREF) {
-    throw error;
+  // Assign default errors before custom errors
+  const undefinedErrors = { ...DEFAULT_UNDEFINED_VARIABLE_ERRORS, ...errors };
+
+  // Loop through all the ENV variable name then check if it is defined
+  for (let variableName in undefinedErrors) {
+    if (typeof env[variableName] === 'undefined') {
+      throw new ReferenceError(undefinedErrors[variableName]);
+    }
   }
 }
 
 export default {
-  ERROR_ROOT_HREF_IS_NOT_DEFINED,
-  checkEnvironmentVariables,
+  DEFAULT_UNDEFINED_VARIABLE_ERRORS,
+  verifyEnvironmentVariables,
 };
