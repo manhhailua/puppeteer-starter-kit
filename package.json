@@ -6,8 +6,8 @@
     "lint": "eslint .",
     "pretest": "npm run verify",
     "test": "jest",
-    "test:helpers": "jest 'helpers\/*\/?(.*)(spec|test).js'",
-    "test:pages": "npm test -- 'pages\/*\/?(.*)(spec|test).js'",
+    "test:helpers": "jest 'helpers/*/?(.*)(spec|test).js'",
+    "test:pages": "npm test -- 'pages/*/?(.*)(spec|test).js'",
     "verify": "babel-node ./configs/verify.js"
   },
   "repository": {
@@ -41,8 +41,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.9.0",
     "jest": "^21.2.1",
-    "puppeteer": "^0.12.0",
-    "regenerator-runtime": "^0.11.0"
+    "puppeteer": "^0.12.0"
   },
   "dependencies": {
     "dotenv": "^4.0.0"

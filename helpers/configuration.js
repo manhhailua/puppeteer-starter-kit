@@ -1,22 +1,24 @@
-export const PO_IGNORE_HTTPS_ERRORS = process.env.PO_IGNORE_HTTPS_ERRORS || false;
-export const PO_HEADLESS = process.env.PO_HEADLESS || true;
-export const PO_HANDLE_SIGINT = process.env.PO_HANDLE_SIGINT || true;
-export const PO_DUMP_IO = process.env.PO_DUMP_IO || false;
-export const PO_DEV_TOOLS = process.env.PO_DEV_TOOLS || false;
-
 export const ROOT_HREF = process.env.ROOT_HREF;
-export const MS_LOGIN_HREF = process.env.MS_LOGIN_HREF;
-export const MS_LOGIN_USER_ID = process.env.MS_LOGIN_USER_ID;
-export const MS_LOGIN_USER_PASSWORD = process.env.MS_LOGIN_USER_PASSWORD;
+
+export const PLO_IGNORE_HTTPS_ERRORS = process.env.PLO_IGNORE_HTTPS_ERRORS || false;
+export const PLO_HEADLESS = process.env.PLO_HEADLESS || true;
+export const PLO_EXECUTABLE_PATH = process.env.PLO_EXECUTABLE_PATH || undefined;
+export const PLO_SLOW_MO = process.env.PLO_SLOW_MO || undefined;
+export const PLO_HANDLE_SIGINT = process.env.PLO_HANDLE_SIGINT || true;
+export const PLO_TIMEOUT = process.env.PLO_TIMEOUT || undefined;
+export const PLO_DUMP_IO = process.env.PLO_DUMP_IO || false;
+export const PLO_USER_DATA_DIR = process.env.PLO_USER_DATA_DIR || false;
+export const PLO_DEV_TOOLS = process.env.PLO_DEV_TOOLS || false;
 
 export default {
-  PO_IGNORE_HTTPS_ERRORS,
-  PO_HEADLESS,
-  PO_HANDLE_SIGINT,
-  PO_DUMP_IO,
-  PO_DEV_TOOLS,
   ROOT_HREF,
-  MS_LOGIN_HREF,
-  MS_LOGIN_USER_ID,
-  MS_LOGIN_USER_PASSWORD,
+  PLO_IGNORE_HTTPS_ERRORS,
+  PLO_HEADLESS,
+  PLO_EXECUTABLE_PATH,
+  PLO_SLOW_MO,
+  PLO_HANDLE_SIGINT,
+  PLO_TIMEOUT,
+  PLO_DUMP_IO,
+  PLO_USER_DATA_DIR,
+  PLO_DEV_TOOLS,
 };
