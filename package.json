@@ -6,6 +6,8 @@
     "lint": "eslint .",
     "pretest": "npm run verify",
     "test": "jest",
+    "test:helpers": "jest 'helpers\/*\/?(.*)(spec|test).js'",
+    "test:pages": "npm test -- 'pages\/*\/?(.*)(spec|test).js'",
     "verify": "babel-node ./configs/verify.js"
   },
   "repository": {
