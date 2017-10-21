@@ -1,10 +1,12 @@
 {
   "name": "puppeteer-starter-kit",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Starter project for headless Chrome Node API using Puppeteer for UI Automation testing.",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "lint": "eslint .",
+    "pretest": "npm run verify",
+    "test": "jest",
+    "verify": "babel-node ./tests/verify.js"
   },
   "repository": {
     "type": "git",
@@ -33,18 +35,21 @@
     "babel-eslint": "^8.0.1",
     "babel-jest": "^21.2.0",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.9.0",
     "jest": "^21.2.1",
-    "puppeteer": "^0.11.0",
+    "puppeteer": "^0.12.0",
     "regenerator-runtime": "^0.11.0"
   },
   "dependencies": {
     "dotenv": "^4.0.0"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js",
+    "setupFiles": [
+      "babel-polyfill",
+      "<rootDir>/tests/setup.js"
+    ],
     "verbose": true
   }
 }

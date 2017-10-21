@@ -1,5 +1,4 @@
-import 'babel-polyfill';
 import dotEnv from 'dotenv';
 
-// Config for .env
+// .env config implementation
 dotEnv.config();

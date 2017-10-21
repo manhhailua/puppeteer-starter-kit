@@ -1,7 +1,7 @@
 import env from '../env';
 
-describe('env helpers', () => {
-  describe('checkEnvironmentVariables', () => {
+describe('ENV helpers', () => {
+  describe('.checkEnvironmentVariables()', () => {
     test('should throw custom error if ROOT_HREF is not defined', () => {
       const mockingThrowingError = jest.fn(() => {
         env.checkEnvironmentVariables('');

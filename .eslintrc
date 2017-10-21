@@ -2,7 +2,8 @@
   "parser": "babel-eslint",
   "extends": "eslint:recommended",
   "env": {
-    "node": true,
-    "jest": true
+    "browser": true,
+    "jest": true,
+    "node": true
   }
 }
