@@ -7,27 +7,29 @@ export async function launch(
   env = configuration,
   puppeteerInstance = puppeteer,
 ) {
-  if (typeof options.ignoreHTTPSErrors === 'undefined') {
-    options.ignoreHTTPSErrors = toBoolean(env.PO_IGNORE_HTTPS_ERRORS);
+  const opts = { ...options };
+
+  if (typeof opts.ignoreHTTPSErrors === 'undefined') {
+    opts.ignoreHTTPSErrors = toBoolean(env.PO_IGNORE_HTTPS_ERRORS);
   }
 
-  if (typeof options.headless === 'undefined') {
-    options.headless = toBoolean(env.PO_HEADLESS);
+  if (typeof opts.headless === 'undefined') {
+    opts.headless = toBoolean(env.PO_HEADLESS);
   }
 
-  if (typeof options.handleSIGINT === 'undefined') {
-    options.handleSIGINT = toBoolean(env.PO_HANDLE_SIGINT);
+  if (typeof opts.handleSIGINT === 'undefined') {
+    opts.handleSIGINT = toBoolean(env.PO_HANDLE_SIGINT);
   }
 
-  if (typeof options.dumpio === 'undefined') {
-    options.dumpio = toBoolean(env.PO_DUMP_IO);
+  if (typeof opts.dumpio === 'undefined') {
+    opts.dumpio = toBoolean(env.PO_DUMP_IO);
   }
 
-  if (typeof options.devtools === 'undefined') {
-    options.devtools = toBoolean(env.PO_DEV_TOOLS);
+  if (typeof opts.devtools === 'undefined') {
+    opts.devtools = toBoolean(env.PO_DEV_TOOLS);
   }
 
-  return await puppeteerInstance.launch(options);
+  return await puppeteerInstance.launch(opts);
 }
 
 export default {
