@@ -24,7 +24,7 @@ Created by [Manhhailua](https://github.com/manhhailua) with :heart:.
 | PLO_USER_DATA_DIR | Path to a [User Data Directory](https://chromium.googlesource.com/chromium/src/+/master/docs/user_data_dir.md) . | String | No |
 | PLO_DEV_TOOLS | Whether to auto-open DevTools panel for each tab. If this option is `true`, the `headless` option will be set `false`. | Boolean | No |
 
-All prefixed by `PLO` ENV variables will be passed to [corresponding named options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)  param of `puppeteer.launch()`. Puppeteer launch options ENV variables can be override by hard coded options. Example:
+All prefixed by `PLO_` ENV variables will be passed to [corresponding named options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)  param of `puppeteer.launch()`. Puppeteer launch options ENV variables can be override by hard coded options. Example:
 
 ```
 puppeteer.launch({
