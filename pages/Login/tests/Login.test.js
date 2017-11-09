@@ -1,4 +1,4 @@
-import puppeteer from '../../../helpers/puppeteer';
+import puppeteer from 'helpers/puppeteer';
 import Login from '../Login';
 
 let loginPage;
@@ -22,7 +22,7 @@ afterAll(async () => {
 
 describe('Login Page', () => {
   beforeAll(async () => {
-    await loginPage.goTo();
+    await loginPage.goTo({ timeout: 0 });
   });
 
   describe('class instance', () => {
