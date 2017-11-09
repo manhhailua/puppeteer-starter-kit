@@ -16,6 +16,7 @@ Created by [Manhhailua](https://github.com/manhhailua) with :heart:.
 | Name | Usage | Type | Required? |
 |---|---|---|---|
 | **ROOT_HREF** | Root href of targeted site | String | Yes |
+| TIMEOUT | Timeout for jest to wait on an action. Defaults to `30000` ms. | Number | No |
 | PLO_IGNORE_HTTPS_ERRORS | Whether to ignore HTTPS errors during navigation. Defaults to `false`. | Boolean | No |
 | PLO_HEADLESS | Whether to run Chromium in headless mode. Defaults to `true` unless the `devtools` option is `true`. | Boolean | No |
 | PLO_EXECUTABLE_PATH | Path to a Chromium executable to run instead of bundled Chromium. If executablePath is a relative path, then it is resolved relative to [current working directory](https://nodejs.org/api/process.html#process_process_cwd) . | String | No |
