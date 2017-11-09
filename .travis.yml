@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "6"
+  - "8"
+  - "9"
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install google-chrome-stable
+cache:
+  directories:
+    - "node_modules"
+script:
+    - npm test
