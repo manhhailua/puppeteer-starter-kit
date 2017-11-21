@@ -1,5 +1,5 @@
 import url from 'url';
-import Page from './Page';
+import Page from 'sites/Page';
 
 class GithubPage extends Page {
   constructor({ path, ...rest }) {
